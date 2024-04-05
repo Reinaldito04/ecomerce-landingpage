@@ -1,0 +1,73 @@
+---
+export async function getStaticPaths() {
+  const pages = [
+    {
+      slug: undefined,
+      title: "Tienda de Astro",
+      text: "¡Te damos la bienvenida a la tienda de Astro!",
+    },
+    
+    {
+      slug: "products/Laptop",
+      title: "Laptop ",
+      descripcion: "La Mejor Laptop Gaming del mercado",
+      precio :"500.99$",
+
+    },
+  ];
+  return pages.map(({ slug, title, descripcion,precio }) => {
+    return {
+      params: { slug },
+      props: { title, descripcion,precio },
+    };
+  });
+}
+import Layout from '../layouts/Layout.astro';
+const { title, descripcion,precio } = Astro.props;
+---
+<Layout title={title}>
+    <div class="container">
+        <img src="https://i.ebayimg.com/images/g/uusAAOSwxNllQRlr/s-l1600.jpg" alt="">
+        <h2>{ title }</h2>
+        <p class="precio">{precio}</p>
+        <p>{ descripcion }</p>
+
+        <button class="btn btn-outline-primary text-white">Add to Car</button>
+        <button class="btn btn-outline-primary text-white">
+            <a href="/">Volver</a>
+            </button>
+    </div>
+   
+
+
+
+</Layout>
+<style>
+    .container{
+        align-items: center;
+        margin-top: 2%;
+    }
+    .precio{
+        font-size: 1.4rem;
+        color: greenyellow;
+        margin: 0;
+    }
+    a{
+        text-decoration: none;
+        
+    }
+    img{
+        height: 500px;
+        margin: 0 auto;
+        display: flex;
+        border-radius: 25px;
+        width:500px;
+    }
+    *{
+        text-align: center;
+        color: white;
+    }
+	body{
+		background-color: #222222;
+	}
+</style>

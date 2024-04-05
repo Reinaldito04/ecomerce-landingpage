@@ -1,0 +1,216 @@
+---
+import Cubo from "./Cubos/Cubo.astro";
+import MiniCuboMedio from "./Cubos/MinicuboMedio.astro"
+import Cubo360 from "./Cubos/Cubo-360.astro";
+import MiniCubo from "./Cubos/MiniCubo.astro"
+---
+
+<section>
+  <div class="row container">
+    <div class="col-md-6">
+      <div class="container">
+        <h3>Mouse Razer</h3>
+        <p class="subtitle">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel,
+          voluptate Lorem impsu
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eius
+          beatae minima, cupiditate nisi nam?
+        </p>
+        <p class="precio">USD. 60.99$</p>
+        <div class="container-botone">
+          <button class="btn btn-outline-primary active"> Hola </button>
+          <button class="btn btn-outline-primary botonsegundo"> hola </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 contenedor-mouse">
+      <img src="/mouseheader.png" alt="" />
+    </div>
+    <div class="contenedor-teclado">
+      <img src="/teclado.png" class="teclado" alt="" />
+    </div>
+    <div class="contenedor-cubo">
+      <Cubo />
+    </div>
+    <div class="contenedor-cubo2">
+      <Cubo360 />
+    </div>
+    <div class="contenedor-cubo4">
+        <MiniCuboMedio  />
+      </div>
+
+    <div class="contenedor-cubo3">
+        <MiniCubo  />
+      </div>
+  </div>
+</section>
+<style>
+  .contenedor-cubo4{
+    position: absolute;
+    width:20px;
+    height: 500px;
+    margin-left: 40%;
+    margin-top: -10%;
+  }
+    .contenedor-cubo3{
+        position: absolute; /* Cambiado a relative para mantener el cubo dentro del contenedor */
+    width: 20px;
+    margin-left: 80%;
+    margin-top: 5%;
+    height: 20px;
+    }
+  .contenedor-cubo2 {
+    position: absolute; /* Cambiado a relative para mantener el cubo dentro del contenedor */
+    width: 50px;
+
+    margin-top: 15%;
+    height: 50px;
+  }
+  .contenedor-cubo {
+    position: absolute; /* Cambiado a relative para mantener el cubo dentro del contenedor */
+    width: 50px;
+    margin-top: -5%;
+    height: 50px;
+  }
+
+  .cube {
+    width: 100%; /* Cambiado a 100% para adaptarse al contenedor */
+    height: 100%; /* Cambiado a 100% para adaptarse al contenedor */
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+  }
+
+  .face {
+    position: absolute;
+    width: 50px; /* Ancho de la cara */
+    height: 50px; /* Alto de la cara */
+    text-align: center;
+    background-color: rgb(0, 184, 255);
+    line-height: 50px; /* Ajusta el centrado vertical */
+    font-size: 10px; /* Tamaño de la fuente */
+    border: 1px solid rgb(0, 255, 159); /* Agregado un borde para resaltar las caras */
+    box-shadow: 0 0 10px rgba(0, 184, 255, 0.8); /* Efecto de iluminación */
+  }
+
+  .front {
+    transform: translateZ(25px); /* La mitad del tamaño del cubo */
+  }
+
+  .back {
+    transform: rotateY(180deg) translateZ(25px); /* La mitad del tamaño del cubo */
+  }
+
+  .top {
+    transform: rotateX(90deg) translateZ(25px); /* La mitad del tamaño del cubo */
+  }
+
+  .bottom {
+    transform: rotateX(-90deg) translateZ(25px); /* La mitad del tamaño del cubo */
+  }
+
+  .left {
+    transform: rotateY(-90deg) translateZ(25px); /* La mitad del tamaño del cubo */
+  }
+
+  .right {
+    transform: rotateY(90deg) translateZ(25px); /* La mitad del tamaño del cubo */
+  }
+
+  @keyframes rotateCube {
+    from {
+      transform: rotateX(0deg) rotateY(0deg);
+    }
+    to {
+      transform: rotateX(360deg) rotateY(360deg);
+    }
+  }
+
+  * {
+    color: white;
+  }
+  .contenedor-teclado {
+    position: absolute;
+    margin-left: -5%;
+    margin-top: 10%;
+  }
+  .precio {
+    margin: 0;
+    color: #7539b1;
+    font-weight: bolder;
+    font-style: italic;
+  }
+  p {
+    margin: 0;
+  }
+  .contenedor-mouse {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -5%;
+  }
+  img {
+    height: 350px;
+    animation: animarMouse infinite 5s forwards ease-in-out;
+  }
+  .teclado {
+    height: 150px;
+    margin-left: 20%;
+    animation: animarteclad infinite 5s forwards ease-in-out;
+  }
+
+  @keyframes animarteclad {
+    0% {
+      transform: rotate(0deg);
+    }
+    40% {
+      transform: rotate(-8deg) scale(0.6);
+    }
+    60% {
+      transform: rotate(8deg) scale(0.9);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes animarMouse {
+    0% {
+      transform: translateY(-20px) rotate(-5deg);
+    }
+    50% {
+      transform: translateY(20px) rotate(5deg);
+    }
+    100% {
+      transform: translateY(-20px) rotate(-5deg);
+    }
+  }
+
+  .botonsegundo {
+    outline-color: white;
+    border-color: white;
+  }
+  .container-botone {
+    margin: 0 auto;
+  }
+  button {
+    padding: 8px 16px;
+  }
+  .subtitle {
+    color: gray;
+    font-size: 0.9rem;
+    text-wrap: balance;
+    width: 70 %;
+  }
+  h3 {
+    font-size: 1.9rem;
+  }
+
+  section {
+    height: 70dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

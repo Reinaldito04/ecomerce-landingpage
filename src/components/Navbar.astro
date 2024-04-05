@@ -1,0 +1,105 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/today.png" alt="Logo" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Clients</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+            
+
+           
+        </div>
+    </div>
+</nav>
+<style>
+   .contenedor-boton {
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-boton button {
+    display: flex;
+    align-items: center; /* Para alinear verticalmente el contenido */
+    font-size: 14px;
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #F20519;
+    color: #333;
+    
+    cursor: pointer;
+}
+
+.contenedor-boton button .contenido {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-boton button img.phone {
+    width: 20px;
+    height: auto;
+    margin: 0;
+    margin-right: 5px;
+    color: white;
+}
+
+.contenedor-boton button p {
+    margin: 0; /* Eliminar el margen del párrafo */
+    color: white;
+}
+    ul:hover, a:hover{
+        transition: all 0.8s;
+        color: #F20519;
+    }
+    ul{
+        justify-content: center;
+        margin: 0 auto;
+    }
+    li{
+        font-size: 18px;
+        color: white;
+    }
+    a{
+        color: white;
+        font-weight: 555;
+    }
+    nav{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 100%;
+        position: fixed;
+        height: 10%;
+        z-index: 9999;
+       
+    }
+    img{
+        margin-left: 80px;
+        width: 180px;
+        object-fit: contain;
+    }
+</style>

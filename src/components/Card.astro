@@ -6,56 +6,72 @@ interface Props {
 }
 
 const { href, title, body } = Astro.props;
----
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+
+---
+<div class="container-card">
+
+	<div class="container-img">
+		<img src="https://i.ebayimg.com/images/g/uusAAOSwxNllQRlr/s-l1600.jpg" alt="">
+	</div>
+	<div class="container-tex">
+		<h4 class="text-white text-center">Laptop</h4>
+		<p class="text-white text-center">500.99$</p>
+		<div class="contenedor-boton">
+
+			<button class="btn text-center text-white">
+				<a href="/products/Laptop">Información</a>
+
+				</button>
+		</div>
+		
+	</div>
+</div>
+
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
+	a{
 		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
 		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
 	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	.contenedor-boton{
+		display: flex;
+		margin-top: -20px;
 	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
+	button{
+		margin: 0 auto;
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
+	.container-img{
+		overflow: hidden;
 	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+.container-card{
+	width: 300px;
+	
+	margin: 0 auto;
+	margin-bottom: 10px;
+	height: 450px;
+	transition: all 0.8s;
+	border-radius: 25px;
+	overflow: hidden;
+}
+.container-card:hover{
+	outline: 2px solid wheat;
+	transition: all 0.8s;
+}
+h4{
+	font-size: 1.4rem;
+}
+p{
+	font-size: 1.2rem;
+}
+img{
+	border-radius: 25px;
+	width: 100%;
+	transition: all 0.8s;
+}
+img:hover{
+	border-radius: 25px;
+	transform: scale(1.2);
+}
+
 </style>

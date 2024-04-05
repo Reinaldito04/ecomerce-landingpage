@@ -1,0 +1,43 @@
+---
+interface Props{
+    img:string;
+    title : string;
+    description : string
+}
+
+const {img,title,description} = Astro.props;
+---
+
+
+<div class="container-card container">
+
+    <div class="container-img">
+        <img src={img} alt="">
+    </div>
+    <div class="container-texto">
+        <h2 class="text-white">{title}</h2>
+        <p class="text-white">{description}</p>
+    </div>
+
+</div>
+
+<style>
+    .container-card{
+        background-color: #393939;
+        width: 90%;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        display: flex;
+
+    }
+    p{
+        text-wrap: balance;
+        font-size: 15px;
+    }
+    img{
+        margin-top: -25px;
+        height: 150px;
+        margin: 0 auto;
+        width: 150px;
+    }
+</style>

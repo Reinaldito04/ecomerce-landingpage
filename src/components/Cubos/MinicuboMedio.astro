@@ -1,0 +1,123 @@
+
+
+<div class="cube">
+    <div class="face front"></div>
+    <div class="face back"></div>
+    <div class="face top"></div>
+    <div class="face bottom"></div>
+    <div class="face left"></div>
+    <div class="face right"></div>
+  </div>
+
+<style>
+.cube {
+  width: 100%; /* Cambiado a 100% para adaptarse al contenedor */
+  height: 100%; /* Cambiado a 100% para adaptarse al contenedor */
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCube 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 25px; /* Ancho de la cara */
+  height: 25px; /* Alto de la cara */
+  text-align: center;
+  background-color: rgb(0, 184, 255);
+ 
+  font-size: 10px; /* Tamaño de la fuente */
+  border: 1px solid rgb(0, 255, 159); /* Agregado un borde para resaltar las caras */
+  box-shadow: 0 0 10px rgba(0, 184, 255, 0.8); /* Efecto de iluminación */
+}
+
+
+.front {
+    animation: CaraFront 1.5s infinite alternate forwards;
+}
+
+.back {
+    animation: CaraBack 1.5s infinite alternate forwards;
+}
+
+.top {
+    animation: CaraTop 1.5s infinite alternate forwards; /* La mitad del tamaño del cubo */
+}
+
+.bottom {
+    animation: CaraBottom 1.5s infinite alternate forwards; /* La mitad del tamaño del cubo */
+}
+
+.left {
+    animation: CaraLeft 1.5s infinite alternate forwards; /* La mitad del tamaño del cubo */
+}
+
+.right {
+    animation: CaraRight 1.5s infinite alternate forwards; /* La mitad del tamaño del cubo */
+}
+@keyframes CaraFront{
+    from{
+        transform: translateZ(12.5px);
+    }
+    to{
+        transform:  translateZ(90px);
+    }
+}
+@keyframes CaraBack{
+    from{
+        transform: rotateY(180deg) translateZ(12.5px);
+    }
+    to{
+        transform: rotateY(180deg) translateZ(90px);
+    }
+}
+@keyframes CaraTop{
+    from{
+        transform: rotateX(90deg) translateZ(12.5px);
+    }
+    to{
+        transform: rotateX(90deg) translateZ(90px);
+    }
+}
+@keyframes CaraBottom{
+    from{
+        transform: rotateX(-90deg) translateZ(12.5px);
+    }
+    to{
+        transform: rotateX(-90deg) translateZ(90px);
+    }
+}
+@keyframes CaraLeft{
+    from{
+        transform: rotateY(-90deg) translateZ(12.5px);
+    }
+    to{
+        transform: rotateY(-90deg) translateZ(90px);
+    }
+}
+@keyframes CaraRight{
+    from{
+        transform: rotateY(-90deg) translateZ(12.5px);
+    }
+    to{
+        transform: rotateY(-90deg) translateZ(90px);
+    }
+}
+
+
+
+
+
+
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+
+
+</style>
