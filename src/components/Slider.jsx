@@ -4,20 +4,27 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
-import './Slider.css';
+import './styles/Slider.css';
+
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay} from 'swiper/modules';
 function Slider() {
   return (
     <>
     
     <Swiper
+        loop={true}
+        autoplay={{
+          delay: 500,
+          disableOnInteraction:true,
+        }}
         slidesPerView={4}
+
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
         <SwiperSlide className='slider'>

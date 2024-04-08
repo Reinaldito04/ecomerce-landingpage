@@ -1,68 +1,108 @@
-<section>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="container-card">
-                        <div class="container-img">
-                            <img src="/mouse1.png" alt="">
-                        </div>
-                        <div class="container-texto">
-                            <p>Mouse Gaming</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="container-card">
-                        <div class="container-img">
-                            <img src="/mouse2.png" alt="">
-                        </div>
-                        <div class="container-texto">
-                            <p>Mouse Gaming</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="container-card">
-                        <div class="container-img">
-                            <img src="/mouse3.png" alt="">
-                        </div>
-                        <div class="container-texto">
-                            <p>Mouse Gaming</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+---
+import ProductCard from "./ProductCard";
+import Cubo from "./Cubos/Cubo.astro";
+---
 
+<section>
+  <div class="container-fluid mt-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <ProductCard
+            colorPrincipal="#1b1b1b"
+            ColorSecundario="#37b6d7"
+            imagen1="/mousenormal.png"
+            imagen2="/mouseacostado.png"
+            imagen3="/mousefrontal.png"
+            imagenPrincipal="/mouseprincipal.png"
+            Product="Mouse Logitech"
+            Descripcion="lorem"
+            Marca="Logitech"
+            ProductModel="k29"
+            ProductName="Mouse Logitech"
+            typeProduct="Mouse "
+            information1="Velocidad : 500 DPI"
+            information2="Alta sensibilidad"
+            client:load
+          />
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <ProductCard
+            colorPrincipal="#1b1b1b"
+            ColorSecundario="#37b6d7"
+            imagen1="/teclado.png"
+            imagen2="/teclado2.png"
+            imagen3="/teclado3.png"
+            imagenPrincipal="/teclado.png"
+            Product="Teclado NPET"
+            Descripcion="lorem"
+            Marca="NPET"
+            ProductModel="K10"
+            ProductName="Teclado NPET"
+            typeProduct="Teclado"
+            information1="Teclado Mecanico"
+            information2="Teclado resistente al agua"
+            client:load
+          />
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <ProductCard
+            colorPrincipal="#1b1b1b"
+            ColorSecundario="#37b6d7"
+            imagen1="/audifonos4.png"
+            imagen2="/audifonos3.png"
+            imagen3="/audifonos2.png"
+            imagenPrincipal="/audifonos2.png"
+            Product="Audifonos Logitech"
+            Descripcion="lorem"
+            Marca="Logitech"
+            ProductModel="42942"
+            ProductName="Audifonos Logitech"
+            typeProduct="Audifonos"
+            information1="Sonido Espacial"
+            information2="Duración de bateria alta"
+            client:load
+          />
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <ProductCard
+            imagenPrincipal="/mackbook4.png"
+            colorPrincipal="#1b1b1b"
+            ColorSecundario="#37b6d7"
+            imagen1="/mackbook4.png"
+            imagen2="/macbook3.png"
+            imagen3="/macbook.png"
+            Product="MacBook  "
+            Descripcion="lorem"
+            Marca="Apple"
+            ProductModel="MacBook Air 2024"
+            ProductName="MacBook  Apple"
+            typeProduct="Laptop"
+            information1="Chip M3"
+            information2="Perfecta para jornadas largas"
+            client:load
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="contenedor-cubo">
+        <Cubo/>
+    </div>
+    <div class="contenedor-cubo2">
+        <Cubo/>
+    </div>
+  </div>
+
+  
+</section>
 <style>
-    p{
-        text-align: center;
-        color: white;
-        font-size: 1.2rem;
+    .contenedor-cubo{
+        position: absolute;
+        margin-left: 5%;
     }
-    .container-card{
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 100px;
-        width: 350px;
-        border-radius: 25px;
-        justify-content: center;
-        
-        align-items: center;
-        height: 250px;
-        position: relative;
-        background-color: #393939;
-    }
-    img{
-        margin-top: -150px;
-        width: 250px;
-        
-        height: 250px;
-        object-fit: contain;
-       
+    .contenedor-cubo2{
+        position: absolute;
+        margin-left: 95%;
     }
 </style>

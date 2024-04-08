@@ -16,14 +16,14 @@
   }
   
   .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
+    
+    width: 80%;
+    height: 50%;
     
     object-fit: contain;
   }
   .mySwiper{
-    height: 300px;
+    height: 200px;
     width: 100%;
     color: white;
     

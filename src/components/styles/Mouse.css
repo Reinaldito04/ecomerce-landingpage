@@ -1,0 +1,170 @@
+.container-boton-mouse {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+   
+  }
+  .boton-mouse{
+    border-top-left-radius: 25px;
+    padding: 8px  16px;
+    font-size: 20px;
+    border-bottom-right-radius: 25px;
+  }
+  .p-mouse {
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 1.2rem;
+  }
+  .container-card-mouse {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+    width: 300px;
+    border-radius: 25px;
+    justify-content: center;
+    min-height: 500px;
+    transition: height 0.8s;
+    align-items: center;
+    max-height: auto;
+    position: relative;
+    background-color: #393939;
+    transition: height 0.8s;
+  }
+  .img-mouse {
+    width: 250px;
+
+    height: 250px;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+  .container-imgmini{
+    height: 100px;
+    width: 100px;
+    margin-inline: 5px;
+    border-radius: 25px;
+    transition: border 0.9s;
+  }
+  .container-imgmini:hover{
+    border: 2px solid rgb(113, 113, 230);
+  }
+  .contenedor-mouses{
+    display: flex;
+   
+   
+  }
+  .container-imgmini img{
+    height: 100%;
+    
+
+    width: 100%;
+    object-fit: contain;
+  }
+  .container-img-container2{
+    display: flex;
+  }
+  .h5-mouse{
+    text-transform: uppercase;
+    padding-inline-start: 25px;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    font-style: italic; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .container2{
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    
+  }
+  .first-container {
+    height: auto; /* Altura del primer contenedor */
+  }
+  
+  .second-container {
+    height: 200px; /* Altura del segundo contenedor */
+  }
+  
+  .container1,
+  .container2 {
+    overflow: hidden; /* Oculta el contenido si es más grande que la altura definida */
+  }
+  
+  .container1 p,
+  .container2 p {
+    margin: 0;
+  }
+  .ul-mouse{
+        margin: 0;
+  }
+  .p-informacionMouse{
+    text-wrap: balance;
+    padding-left: 15px;
+   
+  }
+
+  @keyframes rotateAnimation {
+    from {
+      transform: rotateY(180deg);
+      opacity: 0.1;
+    }
+    to {
+      transform: rotateY(0deg);
+      opacity: 1;
+    }
+  }
+  
+  .rotating-container {
+    animation: rotateAnimation 1s ease;
+  }
+
+  .PrecioMouse{
+    font-weight: bolder;
+    padding: 10px;
+    font-size: 1.4rem;
+  }
+  li{
+    list-style: none;
+    margin: 0px;
+  }
+  .info-icon{
+    font-size: 25px;
+    color: rgb(50, 50, 179);
+    margin-right: 10px;
+  }
+ 
+  .contenedor-mousetitulo {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Esto es para centrar horizontalmente */
+    transform: translateX(-50%); /* Esto ajusta la posición para centrar correctamente */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho del contenedor */
+  }
+  .boton-comprar{
+    border-top-right-radius: 25px;
+  }
+ 
+  .h4-mouse{
+    text-align: center;
+    color: white;
+    font-weight:bolder;
+    font-size: 1.5rem;
+  }
+  .subDescripcion{
+    font-size: 0.8rem;
+    color: #6e6e6e;
+    font-weight: bolder;
+    text-transform: uppercase;
+    
+  }
+  .p-titulo{
+    padding: 20px;
+    font-family:cursive ;
+  }

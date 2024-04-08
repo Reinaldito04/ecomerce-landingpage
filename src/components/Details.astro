@@ -24,10 +24,20 @@ const {img,title,description} = Astro.props;
 <style>
     .container-card{
         background-color: #393939;
-        width: 90%;
+        width: 100%;
         margin-bottom: 10px;
         border-radius: 25px;
         display: flex;
+        overflow: hidden;
+    }
+    h2{
+        font-size: 1.5rem;
+
+    }
+    .container-texto{
+        text-align: center;
+        padding: 10px;
+        
 
     }
     p{
@@ -39,5 +49,15 @@ const {img,title,description} = Astro.props;
         height: 150px;
         margin: 0 auto;
         width: 150px;
+        animation:  AnimarImagen 2s infinite ease-out alternate ;
     }
+    @keyframes AnimarImagen{
+        to{
+            transform:  scale(0.8);
+        }
+        from{
+            transform: translateY(0px) scale(1.2) ;
+        }
+    }
+
 </style>
