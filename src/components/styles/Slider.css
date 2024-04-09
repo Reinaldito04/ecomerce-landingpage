@@ -39,3 +39,9 @@
     height: 100px;
     width: 100px;
   }
+
+  @media only screen and (max-width: 767px){
+    .mySwiper{
+      height: 100px;
+    }
+  }

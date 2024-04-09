@@ -1,8 +1,8 @@
 ---
 import Cubo from "./Cubos/Cubo.astro";
-import MiniCuboMedio from "./Cubos/MinicuboMedio.astro"
+import MiniCuboMedio from "./Cubos/MinicuboMedio.astro";
 import Cubo360 from "./Cubos/Cubo-360.astro";
-import MiniCubo from "./Cubos/MiniCubo.astro"
+import MiniCubo from "./Cubos/MiniCubo.astro";
 ---
 
 <section>
@@ -26,7 +26,7 @@ import MiniCubo from "./Cubos/MiniCubo.astro"
       </div>
     </div>
     <div class="col-md-6 contenedor-mouse">
-      <img src="/mouseheader.png" alt="" />
+      <img src="/mouseheader.png" class="mouseimg" alt="" />
     </div>
     <div class="contenedor-teclado">
       <img src="/teclado.png" class="teclado" alt="" />
@@ -38,29 +38,29 @@ import MiniCubo from "./Cubos/MiniCubo.astro"
       <Cubo360 />
     </div>
     <div class="contenedor-cubo4">
-        <MiniCuboMedio  />
-      </div>
+      <MiniCuboMedio />
+    </div>
 
     <div class="contenedor-cubo3">
-        <MiniCubo  />
-      </div>
+      <MiniCubo />
+    </div>
   </div>
 </section>
 <style>
-  .contenedor-cubo4{
+  .contenedor-cubo4 {
     position: absolute;
-    width:20px;
+    width: 20px;
     height: 500px;
     margin-left: 40%;
     margin-top: -10%;
   }
-    .contenedor-cubo3{
-        position: absolute; /* Cambiado a relative para mantener el cubo dentro del contenedor */
+  .contenedor-cubo3 {
+    position: absolute; /* Cambiado a relative para mantener el cubo dentro del contenedor */
     width: 20px;
     margin-left: 80%;
     margin-top: 5%;
     height: 20px;
-    }
+  }
   .contenedor-cubo2 {
     position: absolute; /* Cambiado a relative para mantener el cubo dentro del contenedor */
     width: 50px;
@@ -213,4 +213,62 @@ import MiniCubo from "./Cubos/MiniCubo.astro"
     align-items: center;
     justify-content: center;
   }
+  
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .mouseimg {
+      height: 200px;
+    }
+  }
+  .contenedor-cubo {
+    margin-top: -10%;
+  }
+  .contenedor-cubo2 {
+    margin-top: 30%;
+  }
+  .contenedor-teclado {
+    margin-top: 20%;
+  }
+  @media only screen and (min-width: 300px) and (max-width: 767px) {
+    .contenedor-cubo4 {
+      display: none;
+    }
+    .mouseimg {
+      height: 150px;
+    }
+    .contenedor-teclado {
+      margin-top: 50%;
+      margin-left: 15%;
+    }
+    .contenedor-mouse {
+      margin-top: 35%;
+    }
+    .contenedor-cubo {
+      margin-top: -15%;
+    }
+    .contenedor-cubo2 {
+      margin-top: 60%;
+    }
+    .teclado {
+      height: 100px;
+    }
+  }
+
+
+  @media only screen and (min-width: 992px) {
+    .contenedor-cubo2{
+  margin-top:15%;
+}
+.contenedor-cubo{
+  margin-top:-5%;
+}
+.contenedor-teclado{
+  margin-top: 10%;
+}
+.teclado{
+  height: 200px;
+  margin-left: 25%;
+}
+  } 
+
+
 </style>

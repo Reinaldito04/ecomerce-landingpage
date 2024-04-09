@@ -1,150 +1,138 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import MouseSection from '../components/MouseSection.astro';
-import Slider from '../components/Slider';
-import Details from '../components/Details.astro';
-import Navbar from '../components/Navbar.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import MouseSection from "../components/MouseSection.astro";
+import Slider from "../components/Slider";
+import Details from "../components/Details.astro";
+import Navbar from "../components/Navbar.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
-import ProductCard from '../components/ProductCard';
+import ProductCard from "../components/ProductCard";
 ---
 
 <Layout title="Tienda">
+  <Navbar />
+  <Header />
+  <MouseSection client:load />
 
-	<Navbar/>
-	<Header/>
-<MouseSection client:load/>
+  <div class="container contenedor-details mt-4">
+    <h2 class="text-white text-center mb-4">Principios Y Valores</h2>
+    <div class="row">
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <Details title="Security" description="lorem" img="/security.svg" />
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <Details title="Money" description="lorem" img="/money.svg" />
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <Details title="Tecnology" description="lorem" img="/computer.svg" />
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <Details title="People" description="lorem" img="/people.svg" />
+      </div>
+    </div>
+  </div>
+  <div class="container contenedor-sliders mt-4">
+    <h2 class="text-white text-center mb-4">Marcas Disponibles</h2>
+    <Slider client:load />
+  </div>
 
-
-
-<div class="container contenedor-details mt-4">
-	<h2 class="text-white text-center mb-4">Principios Y Valores</h2>
-	<div class="row ">
-		<div class="col-md-3">
-			<Details title='Security' description='lorem' img='/security.svg'/>
-		</div>
-		<div class="col-md-3">
-			<Details title='Money' description='lorem' img='/money.svg'/>
-		</div>
-		<div class="col-md-3">
-			<Details title='Tecnology' description='lorem' img='/computer.svg'/>
-		</div>
-		<div class="col-md-3">
-			<Details title='People' description='lorem' img='/people.svg'/>
-		</div>
-	</div>
-
-
-</div>
-<div class="container contenedor-sliders mt-4">
-
-
-	<h2 class="text-white text-center mb-4">Marcas Disponibles</h2>
-	<Slider client:load/>
-</div>
-
-<div class="container mt-4">
-
-	<h2 class="text-white text-center ">Articulos Destacados</h2>
-	<div class="row contenedor-cards">
-		<div class="col-md-3">
-			<ProductCard
-            imagenPrincipal="/impresora.png"
-            colorPrincipal="#1b1b1b"
-            ColorSecundario="#37b6d7"
-            imagen1="/impresora2.png"
-            imagen2="/impresora.png"
-            imagen3="/impresora2.png"
-            Product="Impresora  "
-            Descripcion="lorem"
-            Marca="Canon"
-            ProductModel="Canon PIXMA TR4720 "
-            ProductName="Canon PIXMA"
-            typeProduct="Impresora"
-            information1="Impresora inalámbrica"
-            information2="Con alimentador automático de documentos"
-            client:load
-          />
-		</div>
-		<div class="col-md-3">
-			<ProductCard
-            imagenPrincipal="/celular3.png"
-            colorPrincipal="#1b1b1b"
-            ColorSecundario="#37b6d7"
-            imagen1="/celular2.png"
-            imagen2="/celular.png"
-            imagen3="/celular3.png"
-            Product="Samsung Galaxy   "
-            Descripcion="lorem"
-            Marca="Samsung"
-            ProductModel="Samsung Galaxy A15 5G"
-            ProductName="Samsung Galaxy"
-            typeProduct="SmartPhone"
-            information1="128GB"
-            information2="Pantalla Amoled"
-            client:load
-          />
-		</div>
-		<div class="col-md-3">
-			<ProductCard
-            imagenPrincipal="/ps5.png"
-            colorPrincipal="#1b1b1b"
-            ColorSecundario="#37b6d7"
-            imagen1="/ps52.png"
-            imagen2="/ps53.png"
-            imagen3="/ps5.png"
-            Product="PS5  "
-            Descripcion="lorem"
-            Marca="Sony"
-            ProductModel="PlayStation 5"
-            ProductName="PS5"
-            typeProduct="Consola"
-            information1="Si"
-            information2="Perfecta para jornadas largas"
-            client:load
-          />
-		</div>
-		<div class="col-md-3">
-			<ProductCard
-            imagenPrincipal="/Xbox.png"
-            colorPrincipal="#1b1b1b"
-            ColorSecundario="#37b6d7"
-            imagen1="/xbox2.png"
-            imagen2="/xbox3.png"
-            imagen3="/Xbox.png"
-            Product="Xbox  "
-            Descripcion="lorem"
-            Marca="Microsoft"
-            ProductModel="Xbox Series X"
-            ProductName="Xbox"
-            typeProduct="Console"
-            information1="Waos"
-            information2="Perfecta para jornadas largas"
-            client:load
-          />
-		</div>
-	</div>
-	
-</div>
-<Footer/>
+  <div class="container mt-4">
+    <h2 class="text-white text-center">Articulos Destacados</h2>
+    <div class="row contenedor-cards">
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <ProductCard
+          imagenPrincipal="/impresora.png"
+          colorPrincipal="#1b1b1b"
+          ColorSecundario="#37b6d7"
+          imagen1="/impresora2.png"
+          imagen2="/impresora.png"
+          imagen3="/impresora2.png"
+          Product="Impresora  "
+          Descripcion="lorem"
+          Marca="Canon"
+          ProductModel="Canon PIXMA TR4720 "
+          ProductName="Canon PIXMA"
+          typeProduct="Impresora"
+          information1="Impresora inalámbrica"
+          information2="Con alimentador automático de documentos"
+          client:load
+        />
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <ProductCard
+          imagenPrincipal="/celular3.png"
+          colorPrincipal="#1b1b1b"
+          ColorSecundario="#37b6d7"
+          imagen1="/celular2.png"
+          imagen2="/celular.png"
+          imagen3="/celular3.png"
+          Product="Samsung Galaxy   "
+          Descripcion="lorem"
+          Marca="Samsung"
+          ProductModel="Samsung Galaxy A15 5G"
+          ProductName="Samsung Galaxy"
+          typeProduct="SmartPhone"
+          information1="128GB"
+          information2="Pantalla Amoled"
+          client:load
+        />
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <ProductCard
+          imagenPrincipal="/ps5.png"
+          colorPrincipal="#1b1b1b"
+          ColorSecundario="#37b6d7"
+          imagen1="/ps52.png"
+          imagen2="/ps53.png"
+          imagen3="/ps5.png"
+          Product="PS5  "
+          Descripcion="lorem"
+          Marca="Sony"
+          ProductModel="PlayStation 5"
+          ProductName="PS5"
+          typeProduct="Consola"
+          information1="Si"
+          information2="Perfecta para jornadas largas"
+          client:load
+        />
+      </div>
+      <div class="col-md-6 col-lg-3 col-sm-6">
+        <ProductCard
+          imagenPrincipal="/Xbox.png"
+          colorPrincipal="#1b1b1b"
+          ColorSecundario="#37b6d7"
+          imagen1="/xbox2.png"
+          imagen2="/xbox3.png"
+          imagen3="/Xbox.png"
+          Product="Xbox  "
+          Descripcion="lorem"
+          Marca="Microsoft"
+          ProductModel="Xbox Series X"
+          ProductName="Xbox"
+          typeProduct="Console"
+          information1="Waos"
+          information2="Perfecta para jornadas largas"
+          client:load
+        />
+      </div>
+    </div>
+  </div>
+  <Footer />
 </Layout>
 
-
 <style>
-	body{
-		
-		overflow-x: hidden;
-	}
-	.contenedor-cards{
-		align-items: center;
-		margin: 0 auto;
-		justify-content: center;
-		display: flex;
-		
-	}
-	body{
-		background-color: #222222;
-	}
+  body {
+    overflow-x: hidden;
+  }
+  .contenedor-cards {
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+  }
+  body {
+    background-color: #222222;
+  }
 </style>
